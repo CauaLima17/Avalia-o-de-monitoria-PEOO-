@@ -139,9 +139,25 @@ class SistemaEscolar {
 
 class Data {
     constructor(dia, mes, ano) {
+        if (this.validarData(dia, mes, ano)){
+            throw new Error("A data de nascimento informada é inválida.");
+        };
+
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
+    };
+
+    validarData(dia, mes, ano){
+        if (dia > 31 || dia < 1){
+            return true
+
+        } else if (mes > 12 || mes < 1){
+            return true
+
+        } else if (ano > 2024){
+            return true
+        };
     };
 };
 
