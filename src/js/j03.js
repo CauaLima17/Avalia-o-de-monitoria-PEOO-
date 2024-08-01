@@ -22,7 +22,11 @@ class Estudante {
     };
 };
 
-
+const nomeEstudante = prompt('Informe o nome do estudante: ');
+const matriculaEstudante = prompt('Informe a matrícula do estudante: ');
+const dataNasc = prompt('Informe a data de nascimento do estudante: ');
 
 const novoEstudante = new Estudante;
 novoEstudante(nomeEstudante, matriculaEstudante, dataNasc);
+
+console.log(novoEstudante);
